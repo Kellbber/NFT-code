@@ -6,19 +6,27 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "env:hmg": "cross-env ACTIVE_ENV=development",
+    "env:prod": "cross-env ACTIVE_ENV=production"
   },
   "dependencies": {
     "@stitches/react": "^1.2.8",
     "@types/node": "18.11.9",
     "@types/react": "^18.0.25",
     "@types/react-dom": "18.0.9",
+    "@stripe/stripe-js": "^1.44.1",
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.5",
     "keen-slider": "^6.8.5",
     "next": "13.0.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "stripe": "^11.1.0",
     "typescript": "4.9.3"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3"
   }
 }
