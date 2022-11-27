@@ -5,7 +5,7 @@ import { GetStaticProps } from "next";
 import Image from "next/image";
 import Stripe from "stripe";
 import { stripe } from "../lib/stripe";
-
+import Head from 'next/head'
 import Link from "next/link";
 
 interface HomeProps {
@@ -25,7 +25,12 @@ export default function Home({ products }: HomeProps) {
     },
   });
   return (
+    <>
+    <Head>
+      <title>Home | NFT Code</title>
+    </Head>
     <HomeContainer ref={sliderRef} className="keen-slider">
+
       {products.map((product) => {
         return (
           <Link key={product.id} href={`/product/${product.id}`} prefetch={false}>
@@ -46,6 +51,7 @@ export default function Home({ products }: HomeProps) {
         );
       })}
     </HomeContainer>
+    </>
   );
 }
 

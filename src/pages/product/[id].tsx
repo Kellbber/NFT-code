@@ -1,5 +1,6 @@
 import axios from "axios";
 import { GetStaticPaths, GetStaticProps } from "next";
+import Head from "next/head";
 import Image from 'next/image';
 import { useState } from "react";
 import Stripe from "stripe";
@@ -41,6 +42,10 @@ export default function Product({ product }: ProductProps) {
    }
   }
   return (
+    <>
+        <Head>
+      <title>{product.name} | NFT Code</title>
+    </Head>
     <ProductContainer>
       <ImageContainer>
         <Image src={product.imageUrl} width={420} height={480} alt=""/>
@@ -52,6 +57,7 @@ export default function Product({ product }: ProductProps) {
         <button disabled={isCreating} onClick={()=>handleByProduct()}>Comprar agora</button>
       </ProductDetails>
     </ProductContainer>
+    </>
   );
 }
 
