@@ -28,7 +28,7 @@ export default function Product({ product }: ProductProps) {
  async function handleByProduct(){
    try{
     setIsCreating(true);
-    const response = await axios.post('/api/checkout',{
+    const response = await axios.post('https://nft-code-ulxs.vercel.app/api/checkout',{
       priceId: product.defaultPriceId
     })
 
