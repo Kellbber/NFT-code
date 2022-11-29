@@ -13,8 +13,8 @@ export default async function handler(
   if (!priceId) {
     return res.status(400).json({ error: "price not found" });
   }
-  const successUrl = `${process.env.NEXT_URL}/success?session_id={CHECKOUT_SESSION_ID}`;
-  const cancelUrl = `${process.env.NEXT_URL}/`;
+  const successUrl = `https://nft-code-ulxs.vercel.app/success?session_id={CHECKOUT_SESSION_ID}`;
+  const cancelUrl = `https://nft-code-ulxs.vercel.app/`;
 
   const checkoutSession = await stripe.checkout.sessions.create({
     success_url: successUrl,
