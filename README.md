@@ -1,17 +1,20 @@
-# **NFT-CODE**
+# 🎨 Loja de NFTs Fake - Integração com Stripe
 
+Este projeto é uma demonstração de como integrar o **Stripe** em um e-commerce desenvolvido com **Next.js** e **Styled Components**. O site permite a compra de **NFTs fictícios**, redirecionando o usuário para o **checkout do Stripe** e, após a simulação da compra, retorna ao site com a confirmação do pedido.
 
-## Para baixar as dependências
-- npm install 
-##
-Após, digite **npm run dev** para iniciá-lo.
-## Crie um *.env* 
-- crie um arquivo na raiz do projeto com o nome **.env.local** e coloque as variáveis do seu [Stripe](https://dashboard.stripe.com/) com os seguintes nomes:
-  - STRIPE_PUBLIC_KEY
-  - STRIPE_SECRET_KEY
+## 🚀 Tecnologias utilizadas
 
-### Com essas configurações você já tem o básico para utilizar!
+- **Next.js** → Framework React moderno para aplicações web  
+- **Styled Components** → Biblioteca para estilização com CSS-in-JS  
+- **Stripe** → Plataforma de pagamentos online integrada ao checkout  
 
-#
-Link do Next para dúvidas
-[Next.js](https://nextjs.org/docs)
+## ⚡ Funcionalidades
+
+✅ Listagem de NFTs fictícios para compra  
+✅ Integração com o **Stripe Checkout**  
+✅ Redirecionamento para pagamento seguro no Stripe  
+✅ Retorno ao site após a compra  
+
+## 📌 Observações
+
+Este projeto é apenas uma demonstração da integração do Stripe com um site de e-commerce. Nenhuma transação real é realizada. Para testes, utilize os cartões de teste fornecidos pelo Stripe.
